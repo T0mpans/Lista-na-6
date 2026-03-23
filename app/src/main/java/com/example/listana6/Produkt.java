@@ -23,6 +23,9 @@ public class Produkt {
                     ", nie kupione";
         }
     }
+    public void odwroc(){
+        czyKupione = !isCzyKupione();
+    }
 
     public String getNazwa() {
         return nazwa;

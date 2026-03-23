@@ -18,4 +18,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <EditText
+        android:id="@+id/editTextNazwaProduktu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="nazwa produktu" />
+
+    <EditText
+        android:id="@+id/editTextCena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="cena"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dodaj" />
+
 </LinearLayout>
