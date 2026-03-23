@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Produkt>arrayListProdukty;
     private ArrayAdapter<Produkt>arrayAdapter;
     private ListView listView;
-    private Button button;
+    private Button button, buttonUsun;
     private EditText editTextNazwa, editTextCena;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 String nazwa = editTextNazwa.getText().toString();
                 double cena = Double.parseDouble(editTextCena.getText().toString());
                 arrayListProdukty.add(new Produkt(nazwa,cena));
+                arrayAdapter.notifyDataSetChanged();
+            }
+        });
+        buttonUsun = findViewById(R.id.buttonUsun);
+        buttonUsun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arrayListProdukty.removeIf(Produkt::isCzyKupione);
                 arrayAdapter.notifyDataSetChanged();
             }
         });
